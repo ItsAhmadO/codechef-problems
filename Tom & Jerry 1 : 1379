@@ -1,0 +1,27 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+void solve(){
+    int a,b,c,d,k;
+    cin >> a >> b >> c >> d >> k;
+    int s = abs(a-c) + abs(b-d);
+    if(s==k){
+        cout << "YES" << endl;
+    }
+    else if(s<k && (k-s)%2 == 0){
+        cout << "YES" << endl;
+    }
+    else{
+        cout << "NO" << endl;
+    }
+}
+int main(){
+	int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
